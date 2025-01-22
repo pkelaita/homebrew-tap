@@ -1,16 +1,16 @@
-# Pkelaita Cliff
+# pkelaita/cliff
 
 ## How do I install these formulae?
 
-`brew install pkelaita/cliff/<formula>`
+`brew install pkelaita/cliff/cliff`
 
-Or `brew tap pkelaita/cliff` and then `brew install <formula>`.
+Or `brew tap pkelaita/cliff` and then `brew install cliff`.
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
 tap "pkelaita/cliff"
-brew "<formula>"
+brew "cliff"
 ```
 
 ## Documentation
