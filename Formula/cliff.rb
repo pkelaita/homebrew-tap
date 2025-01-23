@@ -3,8 +3,8 @@ class Cliff < Formula
 
   desc "Generate Unix commands in the terminal"
   homepage "https://github.com/pkelaita/cliff"
-  url "https://files.pythonhosted.org/packages/05/e3/1a4328d9723fc67977a426e8800aa907ea8b0f184fe84596a0c22062cc2c/cliff_cli-0.0.1.tar.gz"
-  sha256 "328bccafe8318b7965c25a250a165d7ff5cd21b397ac17572c2474de0097900c"
+  url "https://files.pythonhosted.org/packages/c0/1c/b3b572e810939ea81f8bf74164d75c202e01ee1f3bc3918b6aa50b7207d4/cliff_cli-0.0.2.tar.gz"
+  sha256 "44f7a6cea991987420ea3713e4654f66330418b77208b0a2a9e2e6d844895e8d"
   license "Apache-2.0"
 
   depends_on "python@3.13"
@@ -44,11 +44,6 @@ class Cliff < Formula
     sha256 "73ed9e9f52ff50ebd71f7965b8f45a79400e5bef5bb59b9a02b60dfef1ca2538"
   end
 
-  resource "python-dotenv" do
-    url "https://files.pythonhosted.org/packages/bc/57/e84d88dfe0aec03b7a2d4327012c1627ab5f03652216c63d49846d7a6c58/python-dotenv-1.0.1.tar.gz"
-    sha256 "e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca"
-  end
-
   resource "sniffio" do
     url "https://files.pythonhosted.org/packages/a2/87/a6771e1546d97e7e041b6ae58d80074f81b7d5121207425c964ddf5cfdbd/sniffio-1.3.1.tar.gz"
     sha256 "f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc"
@@ -65,6 +60,6 @@ class Cliff < Formula
 
   test do
     output = shell_output("#{bin}/cliff --version")
-    assert_match "0.0.1", output
+    assert_match "0.0.2", output
   end
 end
