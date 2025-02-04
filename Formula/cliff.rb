@@ -55,6 +55,6 @@ class Cliff < Formula
 
   test do
     output = shell_output("#{bin}/cliff --version")
-    assert_match "0.0.3", output
+    assert_includes output, "0.1.0"
   end
 end
