@@ -3,8 +3,8 @@ class Cliff < Formula
 
   desc "Generate Unix commands in the terminal"
   homepage "https://github.com/pkelaita/cliff"
-  url "https://files.pythonhosted.org/packages/68/5d/24f7df273fb18bbeb92e61bf2cfa06331219e0994db23a6e0509abb00108/cliff_cli-0.0.3.tar.gz"
-  sha256 "22d96b6a74343cacb5424185188a8956a83a8492299ec36e96e1652a3b0ba172"
+  url "https://files.pythonhosted.org/packages/ce/b2/029ea5e78f91f11b3dba2c4ea8c122d8dc97023b37aa22cd580becf9e79f/cliff_cli-0.1.0.tar.gz"
+  sha256 "23a627a17699be387bf6193fbc5e1c006267d17a1e1fe2ac7af01ee82c75e621"
   license "Apache-2.0"
 
   depends_on "python@3.13"
@@ -15,8 +15,8 @@ class Cliff < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/0f/bd/1d41ee578ce09523c81a15426705dd20969f5abf006d1afe8aeff0dd776a/certifi-2024.12.14.tar.gz"
-    sha256 "b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db"
+    url "https://files.pythonhosted.org/packages/1c/ab/c9f1e32b7b1bf505bf26f0ef697775960db7932abeb7b516de930ba2705f/certifi-2025.1.31.tar.gz"
+    sha256 "3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651"
   end
 
   resource "h11" do
@@ -40,18 +40,13 @@ class Cliff < Formula
   end
 
   resource "l2m2" do
-    url "https://files.pythonhosted.org/packages/12/2b/d7232461772ebf6c22cc15abfc57f3694b77ded85e487dfb53cfda3d8f46/l2m2-0.0.40.tar.gz"
-    sha256 "73ed9e9f52ff50ebd71f7965b8f45a79400e5bef5bb59b9a02b60dfef1ca2538"
+    url "https://files.pythonhosted.org/packages/5c/1f/8d4afafd75e88ddda2f5967e11705fa24c35c09c104678ab013e7570671a/l2m2-0.0.41.tar.gz"
+    sha256 "a1c4a6cb8236e6c27a029af7cde21132bc64721f78257de1cbf2c50408f61342"
   end
 
   resource "sniffio" do
     url "https://files.pythonhosted.org/packages/a2/87/a6771e1546d97e7e041b6ae58d80074f81b7d5121207425c964ddf5cfdbd/sniffio-1.3.1.tar.gz"
     sha256 "f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc"
-  end
-
-  resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz"
-    sha256 "1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"
   end
 
   def install
