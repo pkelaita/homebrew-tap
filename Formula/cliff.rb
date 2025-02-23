@@ -3,8 +3,8 @@ class Cliff < Formula
 
   desc "Generate Unix commands in the terminal"
   homepage "https://github.com/pkelaita/cliff"
-  url "https://files.pythonhosted.org/packages/36/05/f901d98fcd99c0feeb2e72b017eb058cfca6be1dbc0de9b5bcf141e18ac1/cliff_cli-0.1.1.tar.gz"
-  sha256 "1292b625308ab2159bce2a19496cb0225ef3109d52ac6c660fb0dea5b060d055"
+  url "https://files.pythonhosted.org/packages/44/2d/474f5944e1c870cce4590e5b68609df35e80faeb9bf32be7312d8ab87a36/cliff_cli-0.2.1.tar.gz"
+  sha256 "dc39c4b41447650aaa9fdaed41bf495507f67b5025498da007cb802d6a7ebe3d"
   license "Apache-2.0"
 
   depends_on "python@3.13"
@@ -40,8 +40,28 @@ class Cliff < Formula
   end
 
   resource "l2m2" do
-    url "https://files.pythonhosted.org/packages/5c/1f/8d4afafd75e88ddda2f5967e11705fa24c35c09c104678ab013e7570671a/l2m2-0.0.41.tar.gz"
-    sha256 "a1c4a6cb8236e6c27a029af7cde21132bc64721f78257de1cbf2c50408f61342"
+    url "https://files.pythonhosted.org/packages/dc/b2/2c24bd394881e32ce1989aa1206a584b2b62e78b70bbcf71ba2a485f5bc2/l2m2-0.0.43.tar.gz"
+    sha256 "3e5aea0f4704f8ce9f18f12ed74bd728c78a64739e88f3a06a9746dc45140d56"
+  end
+
+  resource "markdown-it-py" do
+    url "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz"
+    sha256 "e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"
+  end
+
+  resource "mdurl" do
+    url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
+    sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
+  end
+
+  resource "pygments" do
+    url "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb8446d8e6937e1408088a72a39937982cc6111d17f84/pygments-2.19.1.tar.gz"
+    sha256 "61c16d2a8576dc0649d9f39e089b5f02bcd27fba10d8fb4dcc28173f7a45151f"
+  end
+
+  resource "rich" do
+    url "https://files.pythonhosted.org/packages/ab/3a/0316b28d0761c6734d6bc14e770d85506c986c85ffb239e688eeaab2c2bc/rich-13.9.4.tar.gz"
+    sha256 "439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098"
   end
 
   resource "sniffio" do
@@ -55,6 +75,6 @@ class Cliff < Formula
 
   test do
     output = shell_output("#{bin}/cliff --version")
-    assert_includes output, "0.1.0"
+    assert_includes output, "0.2.1"
   end
 end
