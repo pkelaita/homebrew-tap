@@ -3,8 +3,8 @@ class Cliff < Formula
 
   desc "Generate Unix commands in the terminal"
   homepage "https://github.com/pkelaita/cliff"
-  url "https://files.pythonhosted.org/packages/44/2d/474f5944e1c870cce4590e5b68609df35e80faeb9bf32be7312d8ab87a36/cliff_cli-0.2.1.tar.gz"
-  sha256 "dc39c4b41447650aaa9fdaed41bf495507f67b5025498da007cb802d6a7ebe3d"
+  url "https://files.pythonhosted.org/packages/37/29/4d2208603f685ad94e1686ad0340883f823647cec6240047ee03b13d511a/cliff_cli-0.2.2.tar.gz"
+  sha256 "167805f0e8dd6a8b96181654a3f7c347728c0ce8acead17c532fc04adfc8c5bc"
   license "Apache-2.0"
 
   depends_on "python@3.13"
@@ -75,6 +75,6 @@ class Cliff < Formula
 
   test do
     output = shell_output("#{bin}/cliff --version")
-    assert_includes output, "0.2.1"
+    assert_includes output, "0.2.2"
   end
 end
