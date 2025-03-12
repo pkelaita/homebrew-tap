@@ -3,8 +3,8 @@ class Cliff < Formula
 
   desc "Generate Unix commands in the terminal"
   homepage "https://github.com/pkelaita/cliff"
-  url "https://files.pythonhosted.org/packages/79/03/cb6ac54ba8e63c9f2699b04bf0fb7eababe26d7f846b97c04b11f0d8c8fb/cliff_cli-0.3.0.tar.gz"
-  sha256 "8aafbedf68d7d994d298d6819833cebd18aafec83d649ef39905b5db1354d263"
+  url "https://files.pythonhosted.org/packages/5f/dc/f745b376a280d161c4ecad41b382eda07dec591572c9e02127350746574e/cliff_cli-0.4.0.tar.gz"
+  sha256 "cbea9f815ed912b943cb31a1e7991666a97427e929e58520091b708ec4cb5e86"
   license "Apache-2.0"
 
   depends_on "python@3.13"
@@ -40,8 +40,8 @@ class Cliff < Formula
   end
 
   resource "l2m2" do
-    url "https://files.pythonhosted.org/packages/3c/5b/e9086b3821285bc38112aae9070891f53d692180dcc089e676b508210cd6/l2m2-0.0.44.tar.gz"
-    sha256 "ff0b0136ffb1e13082e19d42b395d420ef61fa09ef7b68d1c152b81aa5030bdd"
+    url "https://files.pythonhosted.org/packages/bd/fb/24909d2fefd864ec781c548e92d263e63d695cb45de9b4d87ff6a1bccc62/l2m2-0.0.46.tar.gz"
+    sha256 "0a81cb2ba705d053c9448eddc8917ae774ad9bb13298ee95aed53d01e2292765"
   end
 
   resource "markdown-it-py" do
@@ -75,6 +75,6 @@ class Cliff < Formula
 
   test do
     output = shell_output("#{bin}/cliff --version")
-    assert_includes output, "0.3.0"
+    assert_includes output, "0.4.0"
   end
 end
