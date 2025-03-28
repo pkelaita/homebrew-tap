@@ -3,15 +3,15 @@ class Cliff < Formula
 
   desc "Generate Unix commands in the terminal"
   homepage "https://github.com/pkelaita/cliff"
-  url "https://files.pythonhosted.org/packages/5f/dc/f745b376a280d161c4ecad41b382eda07dec591572c9e02127350746574e/cliff_cli-0.4.0.tar.gz"
-  sha256 "cbea9f815ed912b943cb31a1e7991666a97427e929e58520091b708ec4cb5e86"
+  url "https://files.pythonhosted.org/packages/84/d6/e91ae2bedc4efcb9fc9094cc4a3fadbb673a7e21877383c6b344d926c78e/cliff_cli-0.5.0.tar.gz"
+  sha256 "9da19b2ccecadf1ab647d64b94af9f4207b3d2d0ca489d7b546ba19f1c63fabc"
   license "Apache-2.0"
 
   depends_on "python@3.13"
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/a3/73/199a98fc2dae33535d6b8e8e6ec01f8c1d76c9adb096c6b7d64823038cde/anyio-4.8.0.tar.gz"
-    sha256 "1d9fe889df5212298c0c0723fa20479d1b94883a2df44bd3897aa91083316f7a"
+    url "https://files.pythonhosted.org/packages/95/7d/4c1bd541d4dffa1b52bd83fb8527089e097a106fc90b467a7313b105f840/anyio-4.9.0.tar.gz"
+    sha256 "673c0c244e15788651a4ff38710fea9675823028a6f08a5eda409e0c9840a028"
   end
 
   resource "certifi" do
@@ -40,8 +40,8 @@ class Cliff < Formula
   end
 
   resource "l2m2" do
-    url "https://files.pythonhosted.org/packages/bd/fb/24909d2fefd864ec781c548e92d263e63d695cb45de9b4d87ff6a1bccc62/l2m2-0.0.46.tar.gz"
-    sha256 "0a81cb2ba705d053c9448eddc8917ae774ad9bb13298ee95aed53d01e2292765"
+    url "https://files.pythonhosted.org/packages/b8/e0/f6f460fc723e539dfdb6406dc70654759a32dee276debab30e2a3c8929ae/l2m2-0.0.49.tar.gz"
+    sha256 "262fe3a1254f09b9798a88d98285763eab9dba17d9b33c1359d127a981043d07"
   end
 
   resource "markdown-it-py" do
