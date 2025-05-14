@@ -3,11 +3,16 @@ class Cliff < Formula
 
   desc "Generate Unix commands in the terminal"
   homepage "https://github.com/pkelaita/cliff"
-  url "https://files.pythonhosted.org/packages/b3/21/917b7c260be4f8cacf72f60e6571067e3ea4475e095f924cbc800250e446/cliff_cli-0.5.1.tar.gz"
-  sha256 "5389ba9e86a2e2e9cf87b2501737ebf64a33aea2b30148fea7ccc7b8af2e3b2c"
+  url "https://files.pythonhosted.org/packages/b2/8f/c9a370a2c4ef947d479d0ef05e88707bb41d904d51361d8aef9f93df9e58/cliff_cli-0.5.2.tar.gz"
+  sha256 "7bbf33e10590f3e655604f0e7bcf9a2ba471b679469f0d8809bb5cde6c7d1260"
   license "Apache-2.0"
 
   depends_on "python@3.13"
+
+  resource "annotated-types" do
+    url "https://files.pythonhosted.org/packages/ee/67/531ea369ba64dcff5ec9c3402f9f51bf748cec26dde048a2f973a4eea7f5/annotated_types-0.7.0.tar.gz"
+    sha256 "aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"
+  end
 
   resource "anyio" do
     url "https://files.pythonhosted.org/packages/95/7d/4c1bd541d4dffa1b52bd83fb8527089e097a106fc90b467a7313b105f840/anyio-4.9.0.tar.gz"
@@ -40,8 +45,8 @@ class Cliff < Formula
   end
 
   resource "l2m2" do
-    url "https://files.pythonhosted.org/packages/2e/85/f648f3671585e1b9fcedca141c65de155aae5c78ae2f71f174770251f565/l2m2-0.0.51.tar.gz"
-    sha256 "8bbfb190d25483f96e53631bb4e1268e53efba56e11b149f40be2b4eb40797ac"
+    url "https://files.pythonhosted.org/packages/12/93/5c088d5acf6a097be0c65c566bb3e7e82c351d540c534ebc461525c2aebf/l2m2-0.0.53.tar.gz"
+    sha256 "e9a0bc1eb239e619b6764c4a45b4834fecee63ad0b49ff793373fcfc1715c156"
   end
 
   resource "markdown-it-py" do
@@ -52,6 +57,16 @@ class Cliff < Formula
   resource "mdurl" do
     url "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz"
     sha256 "bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"
+  end
+
+  resource "pydantic" do
+    url "https://files.pythonhosted.org/packages/77/ab/5250d56ad03884ab5efd07f734203943c8a8ab40d551e208af81d0257bf2/pydantic-2.11.4.tar.gz"
+    sha256 "32738d19d63a226a52eed76645a98ee07c1f410ee41d93b4afbfa85ed8111c2d"
+  end
+
+  resource "pydantic-core" do
+    url "https://files.pythonhosted.org/packages/ad/88/5f2260bdfae97aabf98f1778d43f69574390ad787afb646292a638c923d4/pydantic_core-2.33.2.tar.gz"
+    sha256 "7cb8bc3605c29176e1b105350d2e6474142d7c1bd1d9327c4a9bdb46bf827acc"
   end
 
   resource "pygments" do
@@ -69,12 +84,22 @@ class Cliff < Formula
     sha256 "f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc"
   end
 
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/f6/37/23083fcd6e35492953e8d2aaaa68b860eb422b34627b13f2ce3eb6106061/typing_extensions-4.13.2.tar.gz"
+    sha256 "e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef"
+  end
+
+  resource "typing-inspection" do
+    url "https://files.pythonhosted.org/packages/82/5c/e6082df02e215b846b4b8c0b887a64d7d08ffaba30605502639d44c06b82/typing_inspection-0.4.0.tar.gz"
+    sha256 "9765c87de36671694a67904bf2c96e395be9c6439bb6c87b5142569dcdd65122"
+  end
+
   def install
     virtualenv_install_with_resources
   end
 
   test do
     output = shell_output("#{bin}/cliff --version")
-    assert_includes output, "0.5.1"
+    assert_includes output, "0.5.2"
   end
 end
