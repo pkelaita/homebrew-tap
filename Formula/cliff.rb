@@ -7,8 +7,8 @@ class Cliff < Formula
   sha256 "b53f640de64d507538c436559278252af5712b6a45568355be293c319471e4eb"
   license "Apache-2.0"
 
-  depends_on "python@3.13"
   depends_on "rust" => :build
+  depends_on "python@3.13"
 
   resource "annotated-types" do
     url "https://files.pythonhosted.org/packages/ee/67/531ea369ba64dcff5ec9c3402f9f51bf748cec26dde048a2f973a4eea7f5/annotated_types-0.7.0.tar.gz"
